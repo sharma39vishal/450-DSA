@@ -1,6 +1,18 @@
 class Solution{
 public:
     int minimumDays(int s, int n, int m){
+        int d=s-(s/7);
+        // cout<<d<<endl;
+        if(s*m>d*n){
+            return -1;
+        }
+        return ceil((float)(s*m)/n);
+    }
+};
+
+class Solution{
+public:
+    int minimumDays(int s, int n, int m){
         if(n<m){
             return -1;
         }
@@ -17,3 +29,4 @@ public:
         return ceil((float)(m*s)/n);
     }
 };
+

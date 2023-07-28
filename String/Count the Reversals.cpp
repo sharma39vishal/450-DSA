@@ -1,4 +1,28 @@
-
+int countRev (string s)
+{
+    int ans=0;
+    
+    if(s.length()%2==1){
+        return -1;
+    }
+   stack<char>stk;
+   for(int i=0;i<s.length();i++){
+       if(s[i]=='}'){
+           if(!stk.empty()){
+               stk.pop();
+           }
+           else{
+               ans++;
+               stk.push('{');
+           }
+       }
+       else{
+            stk.push('{');
+       }
+   }
+   
+    return ans+(stk.size()/2);
+}
 
 int countRev (string s){
     int ob=0;
