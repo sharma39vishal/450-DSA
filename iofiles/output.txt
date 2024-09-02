@@ -1,0 +1,4 @@
+Hello, World!
+ARR [9, 5, 3, 2, 7]
+MIN 2
+MIN 2
